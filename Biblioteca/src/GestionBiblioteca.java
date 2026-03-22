@@ -50,6 +50,16 @@ class Biblioteca
         }
     }
 
+    public void prestarLibros()
+    {
+
+    }
+
+    public void devolverLibros()
+    {
+        
+    }
+
 
 }
 
