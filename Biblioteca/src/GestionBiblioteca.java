@@ -27,6 +27,29 @@ class Biblioteca
         this.contador = 0;
     }
 
+    public void agregar(Libro nuevoLibro)
+    {
+        if (contador < inventario.length)
+        {
+            inventario[contador] = nuevoLibro;
+            contador++;
+        }
+        
+        else
+        {
+            System.out.println("Capacidad máxima alcanzada.");
+        }
+    }
+
+    public void mostrar()
+    {
+        System.out.println("=== LISTADO DE LIBROS ===");
+        for (int i = 0; i < contador; i++)
+        {
+            System.out.println(inventario[i]);
+        }
+    }
+
 
 }
 
@@ -36,10 +59,10 @@ public class GestionBiblioteca
     {
         Biblioteca miBiblio = new Biblioteca(3);
 
-        // miBiblio.agregar(new Libro("Libro 1", "Autor 1"));
-        // miBiblio.agregar(new Libro("Libro 2", "Autor 2"));
-        // miBiblio.agregar(new Libro("Libro 3", "Autor 3"));
+        miBiblio.agregar(new Libro("Libro 1", "Autor 1"));
+        miBiblio.agregar(new Libro("Libro 2", "Autor 2"));
+        miBiblio.agregar(new Libro("Libro 3", "Autor 3"));
 
-        // miBiblio.mostrar();
+        miBiblio.mostrar();
     }
 }
